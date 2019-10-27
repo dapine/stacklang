@@ -1,5 +1,5 @@
 (library
-    (name stack))
+    (name stacklang))
 
 (ocamllex (modules lexer))
 (ocamlyacc (modules parser))
