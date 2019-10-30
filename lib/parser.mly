@@ -6,6 +6,7 @@
 %token PUSH POP ADD IFEQ JUMP PRINT DUP
 
 %start lines
+%start line
 %type <Syntax.line list> lines
 %type <Syntax.instruction> inst
 %type <Syntax.line> line

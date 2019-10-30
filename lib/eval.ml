@@ -22,7 +22,7 @@ let rec eval env = function
                     else ()
     | Syntax.Print -> (match Stack.top_opt env.stack with
                         | None -> print_endline "Eval error (print): Could not print from stack. It might be empty?"
-                        | Some n -> print_endline (">> " ^ (string_of_int n)))
+                        | Some n -> print_endline (">>> " ^ (string_of_int n)))
     | Syntax.Dup -> (match Stack.top_opt env.stack with
                         | None -> print_endline "Eval error (dup): Could not dup from stack. It might be empty?"
                         | Some n -> Stack.push n env.stack)
