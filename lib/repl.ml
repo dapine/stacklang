@@ -7,6 +7,9 @@ let run () =
         Printf.printf "sl> %!";
         let lexbuf = Lexing.from_string (read_line ())
         in let parsed = Parser.line Lexer.token lexbuf
-        in Eval.eval env parsed.inst;
-        IntHashtbl.add tbl parsed.addr parsed.inst
+        in if IntHashtbl.mem tbl parsed.addr
+           then print_endline "Eval error: Address already in use"
+           else (match Eval.eval env parsed.inst with
+                    | Ok _ -> IntHashtbl.add tbl parsed.addr parsed.inst
+                    | Error e -> print_endline e)
     done
