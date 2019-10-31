@@ -14,6 +14,7 @@ add                   sums the two topmost numbers from stack
 jump <addr>           jumps to given <addr>, executing its instruction
 ifeq <addr>           jumps to <addr> when the top of stack is not 0
 dup                   duplicate value from top of stack
+print                 prints the top of the stack
 ```
 
 e.g.
