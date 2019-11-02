@@ -1,1 +1,3 @@
-Stacklang.Repl.run ()
+(* Stacklang.Repl.run () *)
+
+Stacklang.Interpreter.run ()

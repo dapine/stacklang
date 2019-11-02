@@ -31,5 +31,5 @@ lines_:
     | lines_ EOL line { $3 :: $1 }
 ;
 
-lines: lines_ EOF { List.rev $1 }
+lines: lines_ EOL EOF { List.rev $1 }
 ;
