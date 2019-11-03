@@ -1,3 +1,3 @@
-(* Stacklang.Repl.run () *)
+Stacklang.Interpreter.from_file "example.sl"
 
-Stacklang.Interpreter.run ()
+(* Stacklang.Interpreter.repl () *)
